@@ -9,6 +9,7 @@ Ganhou::ganhou Ganhou::Mostrar(sf::RenderWindow & renderWindow)
 	sf::Sprite sprite;
 	sprite.setTexture(imagem);
 
+	//Coordenadas do botao JOGAR
 	item_ganhou botao_jogar;
 	botao_jogar.rect.top = 1250;
 	botao_jogar.rect.height = 1300;

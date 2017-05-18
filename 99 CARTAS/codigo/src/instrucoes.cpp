@@ -66,8 +66,8 @@ Instrucoes::instrucoes_opcoes Instrucoes::Mostrar(sf::RenderWindow& window)
 
 void Instrucoes::set_k(int j)
 {
-	//teste de erro
-	k = j;
+	if( (j >= 1) && (j < QUANT_INSTRUCOES))
+		k = j;
 }
 
 void Instrucoes::proximo_k()
