@@ -227,7 +227,7 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 	{
 		case Jogo::Mostrando_Menu:
 		{
-			mostrar_menu(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
+			mostrar_menu();
 			break;
 		}
 		case Jogo::Mostrando_Tela_Inicial:
@@ -237,7 +237,7 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 		}
 		case Jogo::Mostrando_Instrucao:
 		{
-			mostrar_instrucao(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
+			mostrar_instrucao();
 			break;
 		}
 		case Jogo::Ganhando:
@@ -322,7 +322,7 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 					if (evento_atual.mouseButton.button == sf::Mouse::Left)
 						if (botao_menu.getGlobalBounds().contains(sf::Mouse::getPosition(janela).x, sf::Mouse::getPosition(janela).y))
 						{
-							mostrar_menu(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
+							mostrar_menu();
 						}
 					if (evento_atual.mouseButton.button == sf::Mouse::Left)
 						if (botao_dnv.getGlobalBounds().contains(sf::Mouse::getPosition(janela).x, sf::Mouse::getPosition(janela).y))
@@ -466,7 +466,7 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 					break;
 				case sf::Event::KeyPressed:
 					if (evento_atual.key.code == sf::Keyboard::Escape)
-						mostrar_menu(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
+						mostrar_menu();
 					break;	
 				default:
 					break;
@@ -515,7 +515,7 @@ void Jogo::mostrar_perdeu(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *p
 	}
 }
 
-void Jogo::mostrar_menu(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_c2, pilha_decrescente *pilha_d1, pilha_decrescente *pilha_d2)
+void Jogo::mostrar_menu()
 {
 	Menu menu;
 	Menu::menu_inicial resultado = menu.Mostrar(janela);
@@ -532,7 +532,7 @@ void Jogo::mostrar_menu(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pil
 	}
 }
 
-void Jogo::mostrar_instrucao(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_c2, pilha_decrescente *pilha_d1, pilha_decrescente *pilha_d2)
+void Jogo::mostrar_instrucao()
 {
 	Instrucoes instrucao;
 	instrucao.set_k(1);
