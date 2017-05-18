@@ -21,7 +21,7 @@ bool VerificaGameOver(mesa m, pilha_crescente &c1, pilha_crescente &c2, pilha_de
 		carta = m.get_elemento_i(i, DeuCerto);
 		if (carta != 0) {
 			ok = false;
-			c1.Empilha(carta, DeuCerto); //LOOP INFINITO DO EMPILHA
+			c1.Empilha(carta, DeuCerto);
 			if (DeuCerto) {
 				c1.Desempilha(carta, DeuCerto);
 				ok = true;
@@ -161,14 +161,12 @@ void Jogo::JogarNovamente(mesa* m, pilha_crescente* pilha_c1, pilha_crescente* p
 
 void Jogo::Start(mesa* m, pilha_crescente* pilha_c1, pilha_crescente* pilha_c2, pilha_decrescente* pilha_d1, pilha_decrescente* pilha_d2, fila_monte& f, bool& DeuCerto)
 {
-	cout << "COMECOU START " << endl;
 	f.InicializaElementos();
 	pilha_c1->set_topo(-1);
 	pilha_c2->set_topo(-1);
 	pilha_d1->set_topo(-1);
 	pilha_d2->set_topo(-1);
-	m->LimpaMesa(); //faltou o carregou igual a zero
-	
+	m->LimpaMesa(); 	
 
 	m->PrimeiraDistribuicao(f, DeuCerto);
 
