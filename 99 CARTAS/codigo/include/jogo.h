@@ -10,7 +10,6 @@ class Jogo
 
 public:
 	static void Start(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, fila_monte&, bool&);
-	static void deleta_jogo(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*);
 	static void Desfazer(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, bool&);
 	static void CriandoTudo();
 	static void JogarNovamente(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, fila_monte&, bool&);
@@ -18,8 +17,6 @@ public:
 private:
 	static bool IsExiting();
 	static void loop_jogo(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, fila_monte&, bool&);
-
-	//static void loop_jogo(mesa&, pilha_crescente&, pilha_crescente&, pilha_decrescente&, pilha_decrescente&, fila_monte&);
 
 	static void mostrar_tela_inicial();
 	static void mostrar_menu(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*);

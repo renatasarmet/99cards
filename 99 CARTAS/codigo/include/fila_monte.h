@@ -39,7 +39,7 @@ public:
 private:
 
 	int Elementos[QUANT_CARTAS];
-	int NroElementos; // Fazer integracao com o totalRestante do MAIN.cpp
+	int NroElementos;
 	int Primeiro;
 	int Ultimo;
 };
