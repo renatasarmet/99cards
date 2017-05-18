@@ -19,8 +19,8 @@ private:
 	static void loop_jogo(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, fila_monte&, bool&);
 
 	static void mostrar_tela_inicial();
-	static void mostrar_menu(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*);
-	static void mostrar_instrucao(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*);
+	static void mostrar_menu();
+	static void mostrar_instrucao();
 	static void mostrar_ganhou(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, fila_monte&, bool&);
 	static void mostrar_perdeu(mesa*, pilha_crescente*, pilha_crescente*, pilha_decrescente*, pilha_decrescente*, fila_monte&, bool&);
 
