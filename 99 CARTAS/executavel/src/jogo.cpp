@@ -136,7 +136,6 @@ void Jogo::Desfazer(mesa *m, pilha_crescente* pilha_c1, pilha_crescente* pilha_c
 
 void Jogo::CriandoTudo(void)
 {
-	// na primeira vez irá executar o construtor duas vezes de todas as classes
 	mesa *m = new mesa();
 	fila_monte f; 
 	pilha_crescente *pilha_c1 = new pilha_crescente();
@@ -211,15 +210,6 @@ void Jogo::Start(mesa* m, pilha_crescente* pilha_c1, pilha_crescente* pilha_c2, 
 	}
 
 	janela.close();
-}
-
-void Jogo::deleta_jogo(mesa* m, pilha_crescente* pilha_c1, pilha_crescente* pilha_c2, pilha_decrescente* pilha_d1, pilha_decrescente* pilha_d2)
-{
-	delete m;
-	delete pilha_c1;
-	delete pilha_c2;
-	delete pilha_d1;
-	delete pilha_d2;
 }
 
 bool Jogo::IsExiting()
@@ -503,7 +493,6 @@ void Jogo::mostrar_ganhou(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *p
 	{
 	case Ganhou::Sair:
 		estado_jogo = Jogo::Saindo;
-		//Jogo::deleta_jogo(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
 		break;
 	case Ganhou::Jogar_Novamente:
 		Jogo::JogarNovamente(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2, f, DeuCerto);
@@ -519,7 +508,6 @@ void Jogo::mostrar_perdeu(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *p
 	{
 	case Perdeu::Sair:
 		estado_jogo = Jogo::Saindo;
-		//Jogo::deleta_jogo(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
 		break;
 	case Perdeu::Jogar_Novamente:
 		Jogo::JogarNovamente(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2, f, DeuCerto);
@@ -535,7 +523,6 @@ void Jogo::mostrar_menu(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pil
 	{
 	case Menu::Sair:
 		estado_jogo = Jogo::Saindo;
-		//Jogo::deleta_jogo(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
 		break;
 	case Menu::Jogar:
 		estado_jogo = Jogo::Jogando;
@@ -565,7 +552,6 @@ void Jogo::mostrar_instrucao(mesa *m, pilha_crescente *pilha_c1, pilha_crescente
 		case Instrucoes::Sair:
 			estado_jogo = Jogo::Saindo;
 			continua = 0;
-			//Jogo::deleta_jogo(m, pilha_c1, pilha_c2, pilha_d1, pilha_d2);
 			break;
 		case Instrucoes::Proximo:
 			instrucao.proximo_k();

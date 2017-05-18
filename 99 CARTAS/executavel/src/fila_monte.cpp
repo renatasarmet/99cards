@@ -2,9 +2,6 @@
 
 fila_monte::fila_monte() 
 {
-	/*NroElementos = 0;
-	Primeiro = -1;
-	Ultimo = -1;*/
 	InicializaElementos();
 }
 
@@ -32,7 +29,6 @@ void fila_monte::InicializaElementos()
 void fila_monte::EmbaralhaElementos()
 {
 	int r;
-	//cout << "Nro elementos: " << NroElementos << endl;
 	for (int i = 0; i<NroElementos; i++) 
 	{
 		r = (rand() % NroElementos);
