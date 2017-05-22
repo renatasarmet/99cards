@@ -1,5 +1,6 @@
 #include "headers.h"
 #include "jogo.h"
+#include <windows.h>
 
 #define LARGURA 1125;
 #define ALTURA 1500;
@@ -563,8 +564,9 @@ void Jogo::mostrar_instrucao()
 	}
 }
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv){
+	HWND hWnd = GetConsoleWindow();
+	ShowWindow( hWnd, SW_HIDE );
 	Jogo::CriandoTudo();
 
 	return 0;
