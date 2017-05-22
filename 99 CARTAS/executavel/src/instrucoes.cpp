@@ -15,40 +15,40 @@ Instrucoes::instrucoes_opcoes Instrucoes::Mostrar(sf::RenderWindow& window)
 	imagem_tutorial.loadFromFile(aux2);
 	tutorial.setTexture(imagem_tutorial);
 	tutorial.setOrigin(0, 0);
-	tutorial.setPosition(200, 250);
+	tutorial.setPosition(80, 100);
 
 	//Areas clicaveis 
 
 	//coordenadas do botao JOGAR
 	Item_Instrucoes botao_jogar;
-	botao_jogar.rect.top = 1350;
-	botao_jogar.rect.height = 1450;
-	botao_jogar.rect.left = 50;
-	botao_jogar.rect.width = 450;
+	botao_jogar.rect.top = 540;
+	botao_jogar.rect.height = 580;
+	botao_jogar.rect.left = 20;
+	botao_jogar.rect.width = 180;
 	botao_jogar.action = Jogar;
 
 	//coordenadas do botao PROXIMO
 	Item_Instrucoes botao_proximo;
-	botao_proximo.rect.top = 1100;
-	botao_proximo.rect.height = 1250;
-	botao_proximo.rect.left = 700;
-	botao_proximo.rect.width = 960;
+	botao_proximo.rect.top = 440;
+	botao_proximo.rect.height = 500;
+	botao_proximo.rect.left = 280;
+	botao_proximo.rect.width = 384;
 	botao_proximo.action = Proximo;
 
 	//coordenadas do botao ANTERIOR
 	Item_Instrucoes botao_anterior;
-	botao_anterior.rect.top = 1100;
-	botao_anterior.rect.height = 1250;
-	botao_anterior.rect.left = 125;
-	botao_anterior.rect.width = 425;
+	botao_anterior.rect.top = 440;
+	botao_anterior.rect.height = 500;
+	botao_anterior.rect.left = 50;
+	botao_anterior.rect.width = 170;
 	botao_anterior.action = Anterior;
 	
 	//Coordenadas do botao VOLTAR
 	Item_Instrucoes botao_menu;
-	botao_menu.rect.top = 1350;
-	botao_menu.rect.height = 1450;
-	botao_menu.rect.left = 700;
-	botao_menu.rect.width = 1050;
+	botao_menu.rect.top = 540;
+	botao_menu.rect.height = 580;
+	botao_menu.rect.left = 280;
+	botao_menu.rect.width = 420;
 	botao_menu.action = Menu;
 
 	itens_instrucao.push_back(botao_jogar);

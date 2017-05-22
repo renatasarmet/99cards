@@ -172,23 +172,23 @@ void Jogo::Start(mesa* m, pilha_crescente* pilha_c1, pilha_crescente* pilha_c2, 
 	if (estado_jogo != Inicializado)
 		return;
 
-	janela.create(sf::VideoMode(1125, 1500), "99 Cartas", sf::Style::Close); //DEFINE TAMANHO DA JANELA, O QUE APARECE NO CABEÇALHO E FUNCOES DISPONIVEIS (FECHAR, RESIZE, MINIMIZAR)
+	janela.create(sf::VideoMode(450, 600), "99 Cartas", sf::Style::Close); //DEFINE TAMANHO DA JANELA, O QUE APARECE NO CABEÇALHO E FUNCOES DISPONIVEIS (FECHAR, RESIZE, MINIMIZAR)
 	
 	sf::Texture imagem;
 	imagem.loadFromFile("imagens/fundo2.jpg");
 	background.setTexture(imagem); //DEFINE O BACKGROUND
 	
 	pilha_c1->carregar("imagens/fundo0.jpg");
-	pilha_c1->set_posicao(760, 160);
+	pilha_c1->set_posicao(304, 64);
 
 	pilha_c2->carregar("imagens/fundo0.jpg");
-	pilha_c2->set_posicao(250, 160);
+	pilha_c2->set_posicao(100, 64);
 
 	pilha_d1->carregar("imagens/fundo100.jpg");
-	pilha_d1->set_posicao(760, 570);
+	pilha_d1->set_posicao(304, 228);
 
 	pilha_d2->carregar("imagens/fundo100.jpg");
-	pilha_d2->set_posicao(250, 570);
+	pilha_d2->set_posicao(100, 228);
 
 	_gerenciador_cartas.adicionar("pilha_c1", pilha_c1); //adiciona as novas pilhas ao gerenciador de cartas
 	_gerenciador_cartas.adicionar("pilha_c2", pilha_c2);
@@ -264,15 +264,15 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 
 			imagem.loadFromFile("imagens/desfazer.png");
 			botao_desfazer.setTexture(imagem);
-			botao_desfazer.setPosition(510, 450);
+			botao_desfazer.setPosition(204, 180);
 
 			imagem1.loadFromFile("imagens/botao_menu.png");
 			botao_menu.setTexture(imagem1);
-			botao_menu.setPosition(690, 50);
+			botao_menu.setPosition(276, 20);
 
 			imagem2.loadFromFile("imagens/botao_dnv.png");
 			botao_dnv.setTexture(imagem2);
-			botao_dnv.setPosition(70, 50);
+			botao_dnv.setPosition(28, 20);
 			
 			while (janela.pollEvent(evento_atual))
 			{
@@ -362,9 +362,9 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 							else
 							{
 								if (i % 2 == 0)
-									m->teste[i]->set_posicao(250 + (i * 100), 1020);
+									m->teste[i]->set_posicao(100 + (i * 40), 408);
 								else
-									m->teste[i]->set_posicao(150 + (i * 100), 1270);
+									m->teste[i]->set_posicao(60 + (i * 40), 508);
 							}
 						}
 								
@@ -389,9 +389,9 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 							else
 							{
 								if (i % 2 == 0)
-									m->teste[i]->set_posicao(250 + (i * 100), 1020);
+									m->teste[i]->set_posicao(100 + (i * 40), 408);
 								else
-									m->teste[i]->set_posicao(150 + (i * 100), 1270);
+									m->teste[i]->set_posicao(60 + (i * 40), 508);
 							}
 						}
 						else if (pilha_d1->_sprite.getGlobalBounds().contains(sf::Mouse::getPosition(janela).x, sf::Mouse::getPosition(janela).y))
@@ -414,9 +414,9 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 							else
 							{
 								if (i % 2 == 0)
-									m->teste[i]->set_posicao(250 + (i * 100), 1020);
+									m->teste[i]->set_posicao(100 + (i * 40), 408);
 								else
-									m->teste[i]->set_posicao(150 + (i * 100), 1270);
+									m->teste[i]->set_posicao(60 + (i * 40), 508);
 							}
 						}
 						else if (pilha_d2->_sprite.getGlobalBounds().contains(sf::Mouse::getPosition(janela).x, sf::Mouse::getPosition(janela).y))
@@ -439,17 +439,17 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 							else
 							{
 								if (i % 2 == 0)
-									m->teste[i]->set_posicao(250 + (i * 100), 1020);
+									m->teste[i]->set_posicao(100 + (i * 40), 408);
 								else
-									m->teste[i]->set_posicao(150 + (i * 100), 1270);
+									m->teste[i]->set_posicao(60 + (i * 40), 508);
 							}
 						}
 						else
 						{
 							if (i % 2 == 0)
-								m->teste[i]->set_posicao(250 + (i * 100), 1020);
+								m->teste[i]->set_posicao(100 + (i * 40), 408);
 							else
-								m->teste[i]->set_posicao(150 + (i * 100), 1270);
+								m->teste[i]->set_posicao(60 + (i * 40), 508);
 						}
 						selecionado = false;
 					}

@@ -13,26 +13,26 @@ Menu::menu_inicial Menu::Mostrar(sf::RenderWindow& window)
 
 	//coordenadas do botao JOGAR
 	Item_Menu botao_jogar;
-	botao_jogar.rect.top = 500;
-	botao_jogar.rect.height = 650;
-	botao_jogar.rect.left = 300;
-	botao_jogar.rect.width = 850;
+	botao_jogar.rect.top = 200;
+	botao_jogar.rect.height = 260;
+	botao_jogar.rect.left = 120;
+	botao_jogar.rect.width = 340;
 	botao_jogar.action = Jogar;
 
 	//Coordenadas do botao SAIR
 	Item_Menu botao_sair;
-	botao_sair.rect.top = 925;
-	botao_sair.rect.height = 1050;
-	botao_sair.rect.left = 350;
-	botao_sair.rect.width = 800;
+	botao_sair.rect.top = 370;
+	botao_sair.rect.height = 420;
+	botao_sair.rect.left = 140;
+	botao_sair.rect.width = 320;
 	botao_sair.action = Sair;
 
 	//Coordenadas do botao INSTRUCOES
 	Item_Menu botao_instrucoes;
-	botao_instrucoes.rect.top = 700;
-	botao_instrucoes.rect.height = 850;
-	botao_instrucoes.rect.left = 100;
-	botao_instrucoes.rect.width = 1100;
+	botao_instrucoes.rect.top = 280;
+	botao_instrucoes.rect.height = 340;
+	botao_instrucoes.rect.left = 40;
+	botao_instrucoes.rect.width = 440;
 	botao_instrucoes.action = Instrucoes;
 
 	itens_menu.push_back(botao_jogar);
