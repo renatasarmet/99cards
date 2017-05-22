@@ -89,9 +89,9 @@ void mesa::set_elemento_i(int i, int X, bool &DeuCerto)
 			teste[i]->_sprite.setOrigin(teste[i]->_sprite.getLocalBounds().width/2, teste[i]->_sprite.getLocalBounds().height/2);
 
 			if (i % 2 == 0)
-				teste[i]->set_posicao(250 + (i * 100), 1020);
+				teste[i]->set_posicao(100 + (i * 40), 408);
 			else
-				teste[i]->set_posicao(150 + (i * 100), 1270);
+				teste[i]->set_posicao(60 + (i * 40), 508);
 		}
 	}
 	else

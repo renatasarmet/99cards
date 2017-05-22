@@ -11,18 +11,18 @@ Perdeu::perdeu Perdeu::Mostrar(sf::RenderWindow & renderWindow)
 
 	//Coordenadas do botao JOGAR
 	item_perdeu botao_jogar;
-	botao_jogar.rect.top = 1250;
-	botao_jogar.rect.height = 1300;
-	botao_jogar.rect.left = 250;
-	botao_jogar.rect.width = 850;
+	botao_jogar.rect.top = 500;
+	botao_jogar.rect.height = 520;
+	botao_jogar.rect.left = 100;
+	botao_jogar.rect.width = 340;
 	botao_jogar.action = Jogar_Novamente;
 
 	//Coordenadas do botao SAIR
 	item_perdeu botao_sair;
-	botao_sair.rect.top = 1400;
-	botao_sair.rect.height = 1450;
-	botao_sair.rect.left = 300;
-	botao_sair.rect.width = 800;
+	botao_sair.rect.top = 520;
+	botao_sair.rect.height = 580;
+	botao_sair.rect.left = 120;
+	botao_sair.rect.width = 320;
 	botao_sair.action = Sair;
 
 	itens_perdeu.push_back(botao_jogar);
