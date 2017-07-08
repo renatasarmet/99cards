@@ -1,6 +1,5 @@
 #include "headers.h"
 #include "jogo.h"
-#include <windows.h>
 
 #define LARGURA 1125;
 #define ALTURA 1500;
@@ -260,6 +259,19 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 			sf::Texture imagem1;
 			sf::Sprite botao_dnv;
 			sf::Texture imagem2;
+			sf::Text cartas;
+			sf::Font fonte;
+
+			fonte.loadFromFile("imagens/star.ttf");
+			cartas.setCharacterSize(20);
+			cartas.setPosition(100, 10);
+			cartas.setFont(fonte);
+			cartas.setOutlineColor(sf::Color::Blue);
+			cartas.setOutlineThickness(0.5);
+			cartas.setFillColor(sf::Color::Transparent);
+			
+			cartas.setString(to_string(f.get_NroElementos() + m->get_NroElementos()));
+
 			bool DeuCerto;
 			int pilha = 0;
 
@@ -269,11 +281,11 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 
 			imagem1.loadFromFile("imagens/botao_menu.png");
 			botao_menu.setTexture(imagem1);
-			botao_menu.setPosition(276, 20);
+			botao_menu.setPosition(187, 17);
 
 			imagem2.loadFromFile("imagens/botao_dnv.png");
 			botao_dnv.setTexture(imagem2);
-			botao_dnv.setPosition(28, 20);
+			botao_dnv.setPosition(300, 17);
 			
 			while (janela.pollEvent(evento_atual))
 			{
@@ -290,6 +302,7 @@ void Jogo::loop_jogo(mesa *m, pilha_crescente *pilha_c1, pilha_crescente *pilha_
 
 				janela.clear();
 				janela.draw(background);
+				janela.draw(cartas);
 				janela.draw(botao_menu);
 				janela.draw(botao_dnv);
 				if (podeDesfazer)
@@ -564,9 +577,8 @@ void Jogo::mostrar_instrucao()
 	}
 }
 
-int main(int argc, char** argv){
-	HWND hWnd = GetConsoleWindow();
-	ShowWindow( hWnd, SW_HIDE );
+int main(int argc, char** argv)
+{
 	Jogo::CriandoTudo();
 
 	return 0;
