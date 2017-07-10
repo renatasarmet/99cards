@@ -1,5 +1,7 @@
 #include "headers.h"
 #include "jogo.h"
+//Linha referente para remover o cmd no windows.
+//#include <windows.h>
 
 #define LARGURA 1125;
 #define ALTURA 1500;
@@ -579,6 +581,9 @@ void Jogo::mostrar_instrucao()
 
 int main(int argc, char** argv)
 {
+	//Linhas referentes para remover o cmd no windows.
+	//HWND hWnd = GetConsoleWindow();
+	//ShowWindow( hWnd, SW_HIDE );
 	Jogo::CriandoTudo();
 
 	return 0;
